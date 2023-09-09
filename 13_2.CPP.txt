@@ -1,0 +1,25 @@
+#include<stdlib.h>
+#include<stdio.h>
+#include<conio.h>
+#include<fstream.h>
+int main()
+{
+  ifstream f;
+  ofstream o;
+  char c;
+  clrscr();
+  f.open("xyz.txt");
+  o.open("abc.txt");
+  while(1)
+  {
+    f.get(c);
+    if(c==EOF)
+    {
+     break;
+    }
+    o.put(c);
+  }
+    o.close();
+    getch();
+    return 0;
+}

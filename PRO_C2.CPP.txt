@@ -1,0 +1,175 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+class qconverter
+{
+ int km;
+ int m;
+ int centi;         	//distance data members
+ float inch;
+ float feet;
+
+ float rupee;
+ float dollar;      	//currency data members
+ float euro;
+ float pound;
+ float dirham;
+
+ float faren;
+ float kelvin;          //temprature data members
+ float celsius;
+
+ float litre;
+ float milli;           //capacity data members
+ float kilolitre;
+ float gallons;
+
+ int gram;
+ int kilogram;           //mass data members
+ int ton;
+ int dozen;
+ public:
+ void dgetdata() // getdata of distance
+   {
+	cout<<"Enter distance in km:"<<endl;
+	cin>>km;
+	cout<<"---------------------------------------"<<endl;
+	cout<<"Entered distance:"<<km<<endl;
+
+   }
+ void cugetdata()  //getdata of currency
+  {     cout<<endl;
+	cout<<"Enter currency in rupee:"<<endl;
+	cin>>rupee;
+	cout<<"-----------------------------------------"<<endl;
+	cout<<"Entered currency:"<<rupee<<endl;
+  }
+ void tgetdata()  //getdata of temprature
+  {     cout<<endl;
+	cout<<"Enter temperature in celsius:"<<endl;
+	cin>>celsius;
+	cout<<"------------------------------------------"<<endl;
+	cout<<"Entered celsius:"<<celsius<<endl;
+  }
+ void cgetdata() //getdata of capacity
+ {      cout<<endl;
+	cout<<"Enter capacity in litres:"<<endl;
+	cin>>litre;
+	cout<<"-------------------------------------------"<<endl;
+	cout<<"Entered litres:"<<litre<<endl;
+ }
+ void mgetdata() //getdata of mass
+  {     cout<<endl;
+	cout<<"Enter mass in kilogram:"<<endl;
+	cin>>kilogram;
+	cout<<"--------------------------------------------"<<endl;
+	cout<<"Entered kilogram:"<<kilogram<<endl;
+   }
+ void kmtom()          //beign of distance
+     {
+	m=km*1000;
+	cout<<"::::Converted kilometer to meter::::"<<m<<endl;
+     }
+ void kmtocm()
+      {
+	centi=km*100000;
+	cout<<"::::Converted kilometer to centimeter::::"<<centi<<endl;
+      }
+ void kmtoinch()
+       {
+	 inch=km*39.37;
+	 cout<<"::::Converted kilometer to inch::::"<<inch<<endl;
+       }
+ void kmtofeet()
+	{
+	  feet=km*30.48;
+	  cout<<"::::Converted kilometer to feet::::"<<feet<<endl;
+	}  //end of distance
+ void rupeetodollar()               // begin of currency
+      {
+		dollar=rupee*82.91;
+		cout<<"::::Converted rupee to dollar::::"<<dollar<<endl;
+      }
+ void rupeetoeuro()
+      {
+		euro=rupee*89.68;
+		cout<<"::::Converted rupee to euro::::"<<euro<<endl;
+      }
+ void rupeetopound()
+      {
+		pound=rupee*103.19;
+		cout<<"::::Converted rupee to pound::::"<<pound<<endl;
+      }
+ void rupeetodirham()
+      {
+		dirham=rupee*22.56;
+		cout<<"::::Converted rupee to dirham::::"<<dirham<<endl;
+      }          //end of currency
+void celsiustofaren()              //begin of tempertare
+     {
+		faren=celsius*(9/5)+32;
+		cout<<"::::Converted celsius to farenheit::::"<<faren<<endl;
+     }
+void celsiustokelvin()
+     {
+		kelvin=celsius*273.15;
+		cout<<"::::Converted celsius to kelvin::::"<<kelvin<<endl;
+     }          //end of temperature
+void litretomilli()                  //begin of capacity
+     {
+		milli=litre*1000;
+		cout<<"::::Converted litre to milli::::"<<milli<<endl;
+     }
+void litretokilolitre()
+     {
+		kilolitre=litre*1000;
+		cout<<"::::Converted litre to kilolitre::::"<<kilolitre<<endl;
+     }
+void litretogallons()
+     {
+		gallons=litre*0.264172;
+		cout<<"::::Converted litre to gallons::::"<<gallons<<endl;
+     }                                 //end of capacity
+
+void kilogramtogram()   //mass begins here
+     {
+		gram=kilogram*1000;
+		cout<<"::::Converted kilogram to gram::::"<<gram<<endl;
+     }
+void kilogramtoton()
+     {
+		ton=kilogram*0.0011;
+		cout<<"::::Converted kilogram to ton::::"<<ton<<endl;
+      }
+void kilogramtodozen()
+    {
+		dozen=kilogram*12;
+		 cout<<"::::Converted kilogram to dozen::::"<<dozen;
+    }
+
+
+};
+
+void main()
+{
+qconverter q1;
+
+int n;
+cout<<"Enter 1 to convert kilogram to ton ";
+
+
+
+
+switch(n){
+case 1:
+q1.kilogramtoton();
+break;
+cout<<"completted";
+
+
+
+
+}
+getch();
+}

@@ -1,0 +1,40 @@
+#include<iostream.h>
+#include<conio.h>
+class base
+{
+  public:
+  void print()
+  {
+    cout<<"print function of base:"<<endl;
+  }
+  virtual void show()
+  {
+    cout<<"show function of base:"<<endl;
+  }
+};
+class derived : public base
+{
+   public:
+   void print()
+   {
+     cout<<"print function of derived:"<<endl;
+   }
+   void show()
+   {
+     cout<<"show function of derived:"<<endl;
+   }
+};
+int main()
+{
+  base b,*bptr;
+  derived d,*dptr;
+  bptr=&d;
+  dptr=&d;
+  clrscr();
+  bptr->show();
+  dptr->show();
+  bptr->print();
+  dptr->print();
+  getch();
+  return 0;
+}

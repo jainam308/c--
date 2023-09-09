@@ -1,0 +1,22 @@
+#include<iostream.h>
+#include<conio.h>
+class demo
+{
+  public:
+  demo()
+  {
+    cout<<"Welcome to constructor:"<<endl;
+  }
+  ~demo()
+  {
+    cout<<"Welcome to destructor:"<<endl;
+  }
+};
+int main()
+{
+ clrscr();
+ demo d1,d2;
+ cout<<"Welcome to main:"<<endl;
+ getch();
+ return 0;
+}

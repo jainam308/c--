@@ -1,0 +1,59 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+class student
+{
+  int roll;
+  char name[10];
+  float SPI;
+  public:
+  void getdata()
+  {
+    cout<<"Enter student roll no:"<<endl;
+    cin>>roll;
+    cout<<"Enter student name:"<<endl;
+    gets(name);
+    cout<<"Enter student SPI:"<<endl;
+    cin>>SPI;
+  }
+  void display()
+  {
+    cout<<"Student roll is:"<<roll<<endl;
+    cout<<"Student name is:"<<name<<endl;
+    cout<<"Student SPI is:"<<SPI<<endl;
+  }
+  friend void max(student *a,int b)
+
+};
+void max(student *a,int b)
+{
+    float h=0.0;
+    int z;
+    for(int i=0;i<b;i++)
+    {
+      if(h<a[i].SPI)
+      {
+       h=a[i].SPI;
+       z=i;
+      }
+    }
+    cout<<"Roll no of the student having highest SPI is:"<<a[z].roll<<endl;
+    cout<<"Name of the student having highest SPI is:"<<a[z].name<<endl;
+    cout<<"Highest SPI of student is:"<<a[z].SPI<<endl;
+}
+int main()
+{
+  student s[10];
+  clrscr();
+  for(int i=0;i<=9;i++)
+  {
+    s[i].getdata();
+  }
+  for(i=0;i<=9;i++)
+  {
+    s[i].display();
+  }
+  max(s,10);
+  getch();
+  return 0;
+}

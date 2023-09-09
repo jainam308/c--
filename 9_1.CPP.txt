@@ -1,0 +1,39 @@
+#include<iostream.h>
+#include<conio.h>
+class complex
+{
+  int r;
+  int i;
+  public:
+  void getdata()
+  {
+    cout<<"Enter value of real:"<<endl;
+    cin>>r;
+    cout<<"Enter value of imaginary:"<<endl;
+    cin>>i;
+  }
+  void printdata()
+  {
+    cout<<"REAL:"<<r<<endl;
+    cout<<"IMAGINARY:"<<i<<"i"<<endl;
+  }
+  friend complex addComplex(complex a,complex b);
+};
+complex addComplex(complex a,complex b)
+{
+   complex c;
+   c.r=a.r+b.r;
+   c.i=a.i+b.i;
+   return c;
+}
+int main()
+{
+   complex c1,c2,c3;
+   clrscr();
+   c1.getdata();
+   c2.getdata();
+   c3=addComplex(c1,c2);
+   c3.printdata();
+   getch();
+   return 0;
+}

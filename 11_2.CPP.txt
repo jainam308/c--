@@ -1,0 +1,48 @@
+#include<iostream.h>
+#include<conio.h>
+class A
+{
+   int a;
+   public:
+   void geta()
+   {
+      a=10;
+   }
+   int seta()
+   {
+     return(a);
+   }
+};
+class B : public A
+{
+   int b;
+   public:
+   void getb()
+   {
+     b=20;
+   }
+   int setb()
+   {
+      return(b);
+   }
+};
+class C : public B
+{
+   public:
+   void show()
+   {
+    cout<<endl<<"a is:::"<<seta();
+    cout<<endl<<"b is:::"<<setb();
+   }
+};
+int main()
+{
+  C c1;
+  clrscr();
+  c1.geta();
+  c1.getb();
+  cout<<"-----------------------------MULTILEVEL INHERITANCE-----------------\n";
+  c1.show();
+  getch();
+  return 0;
+}

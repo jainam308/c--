@@ -1,0 +1,22 @@
+#include<iostream.h>
+#include<conio.h>
+#include<iomanip.h>
+void swap(int &a,int &b)
+{
+   int c;
+   cout<<a<<setw(5)<<b<<endl;
+   c=a;
+   a=b;
+   b=c;
+   cout<<a<<setw(5)<<b<<endl;
+}
+int main()
+{
+  int x=5,y=10;
+  clrscr();
+  cout<<x<<setw(5)<<y<<endl;
+  swap(x,y);
+  cout<<x<<setw(5)<<y<<endl;
+  getch();
+  return 0;
+}

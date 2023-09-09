@@ -1,0 +1,59 @@
+#include<iostream.h>
+#include<conio.h>
+class A
+{
+  protected:
+  int a;
+  public:
+  void getA()
+  {
+    cout<<"Enter value of a:"<<endl;
+    cin>>a;
+  }
+  void printA()
+  {
+    cout<<"Value of a:"<<a<<endl;
+  }
+};
+class B
+{
+  protected:
+  int b;
+  public:
+  void getB()
+  {
+    cout<<"Enter value of b:"<<endl;
+    cin>>b;
+  }
+  void printB()
+  {
+    cout<<"Value of b:"<<b<<endl;
+  }
+};
+class C : public A, public B
+{
+  protected:
+  int c;
+  public:
+  void product()
+  {
+    c=a*b;
+  }
+  void display()
+  {
+    cout<<"Multiplication:"<<c<<endl;
+  }
+};
+int main()
+{
+  C c1;
+  clrscr();
+  c1.getA();
+  c1.getB();
+  c1.printA();
+  c1.printB();
+  c1.product();
+  c1.display();
+  getch();
+  return 0;
+}

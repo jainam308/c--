@@ -1,0 +1,39 @@
+#include<iostream.h>
+#include<conio.h>
+class Number
+{
+  int x;
+  public:
+  void set(int x)
+  {
+    this->x=x;
+  }
+  void print()
+  {
+    cout<<"X:"<<x<<endl;
+  }
+  Number maxnum(Number n)
+  {
+    if(this->x>n.x)
+    {
+      return *this;
+    }
+    else
+    {
+      return n;
+    }
+  }
+};
+int main()
+{
+   Number n1,n2,n3;
+   clrscr();
+   n1.set(10);
+   n2.set(20);
+   n1.print();
+   n2.print();
+   n3=n1.maxnum(n2);
+   n3.print();
+   getch();
+   return 0;
+}

@@ -1,0 +1,58 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+class emp
+{
+   char ename[20];
+   int eno;
+   float basic;
+   int da;
+   int it;
+   long int net_salary;
+
+   public:
+   void getdata()
+   {
+    cout<<"Enter employee name:"<<endl;
+    gets(ename);
+    cout<<"Enter employee number:"<<endl;
+    cin>>eno;
+    cout<<"Enter basic salary:"<<endl;
+    cin>>basic;
+    cout<<"Enter da:"<<endl;
+    cin>>da;
+    cout<<"Enter it:"<<endl;
+    cin>>it;
+   }
+   void printdata()
+   {
+     cout<<"Name:"<<ename<<endl;
+     cout<<"Number:"<<eno<<endl;
+     cout<<"Basic:"<<basic<<endl;
+     cout<<"da:"<<da<<endl;
+     cout<<"it:"<<it<<endl;
+   }
+   void netsal()
+   {
+     net_salary=(basic+da)-it;
+     cout<<"Your net salary is:"<<net_salary<<endl;
+   }
+
+};
+int main()
+{
+  emp e1,e2;
+  clrscr();
+
+  e1.getdata();
+  e1.printdata();
+  e1.netsal();
+
+  e2.getdata();
+  e2.printdata();
+  e2.netsal();
+  getch();
+  return 0;
+}
+

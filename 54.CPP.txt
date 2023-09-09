@@ -1,0 +1,30 @@
+#include<iostream.h>
+#include<conio.h>
+class item
+{
+  int quantity;
+  int cost;
+  public:
+  void getdata();
+  void printdata()
+  {
+    cout<<"Quantity is:"<<quantity<<endl;
+    cout<<"Cost is:"<<cost<<endl;
+  }
+};
+void item::getdata()
+{
+  cout<<"Enter quantity is:"<<endl;
+  cin>>quantity;
+  cout<<"Enter cost is:"<<endl;
+  cin>>cost;
+}
+int main()
+{
+  clrscr();
+  item i;
+  i.getdata();
+  i.printdata();
+  getch();
+  return 0;
+}

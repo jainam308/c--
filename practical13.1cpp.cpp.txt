@@ -1,0 +1,22 @@
+#include<fstream.h>
+#include<conio.h>
+#include<iostream.h>
+int main()
+{
+   ifstream f;
+   char s;
+   int count=0;
+   clrscr();
+   f.open("xyz.txt");
+   while(1)
+   {
+    f.get(s);
+    if(s==EOF)
+    {
+      break;
+    }
+   }
+   count++;
+   getch();
+     
+}

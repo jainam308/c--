@@ -1,0 +1,24 @@
+#include<iostream.h>
+#include<conio.h>
+int main()
+{
+  int i,j,n=0,r;
+  clrscr();
+  cout<<"Enter rows";
+  cin>>r;
+  for(i=0;i<=r;i++)
+  {
+    for(int s=1;s<=r-i;s++)
+    {
+      cout<<" ";
+    }
+    for(j=i;j>=1;j--)
+    {
+      n++;
+      cout<<n<<" ";
+    }
+    cout<<"\n";
+  }
+  getch();
+  return 0;
+}

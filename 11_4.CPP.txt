@@ -1,0 +1,41 @@
+#include<iostream.h>
+#include<conio.h>
+class Base
+{
+   int x;
+   public:
+   Base()
+   {
+     cout<<"-----------CONSTRUCTOR INHERITANCE------------"<<endl;
+     x=0;
+     cout<<x<<endl;
+   }
+   Base(int a)
+   {
+     x=a;
+     cout<<x<<endl;
+   }
+};
+class Derived : public Base
+{
+   int y;
+   public:
+   Derived()
+   {
+     y=0;
+     cout<<y<<endl;
+   }
+   Derived(int a,int b):Base(a)
+   {
+     y=b;
+     cout<<y<<endl;
+   }
+};
+int main()
+{
+   clrscr();
+   Base b1;
+   Derived d1(5,10);
+   getch();
+   return 0;
+}

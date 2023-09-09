@@ -1,0 +1,32 @@
+#include<iostream.h>
+#include<conio.h>
+class wall
+{
+  int l;
+  int h;
+  public:
+  wall()
+  {
+    l=0;
+    h=0;
+  }
+  wall(int a,int b)
+  {
+    l=a;
+    h=b;
+  }
+  void display()
+  {
+    cout<<"LENGTH:"<<l<<endl;
+    cout<<"HEIGHT:"<<h<<endl;
+  }
+};
+int main()
+{
+  wall d1,d2(10,20);
+  clrscr();
+  d1.display();
+  d2.display();
+  getch();
+  return 0;
+}

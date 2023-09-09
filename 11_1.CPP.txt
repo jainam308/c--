@@ -1,0 +1,56 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+class person
+{
+  int id;
+  char name[20];
+  public:
+  void get_person()
+  {
+    cout<<"Enter person id:"<<endl;
+    cin>>id;
+    cout<<"Enter person name:"<<endl;
+    gets(name);
+  }
+  void print_person()
+  {
+    cout<<"ID:"<<id<<endl;
+    cout<<"NAME:"<<name<<endl;
+  }
+};
+class student : public person
+{
+   int roll;
+   long int fees;
+   char branch[20];
+   public:
+   void get_stud()
+   {
+     get_person();
+     cout<<"Enter student roll:"<<endl;
+     cin>>roll;
+     cout<<"Enter student fees:"<<endl;
+     cin>>fees;
+     cout<<"Enter student branch:"<<endl;
+     gets(branch);
+   }
+   void print_stud()
+   {
+      print_person();
+      cout<<"ROLL:"<<roll<<endl;
+      cout<<"FEES:"<<fees<<endl;
+      cout<<"BRANCH:"<<branch<<endl;
+   }
+};
+int main()
+{
+   student s1,s2;
+   clrscr();
+   s1.get_stud();
+   s2.get_stud();
+   s1.print_stud();
+   s2.print_stud();
+   getch();
+   return 0;
+}

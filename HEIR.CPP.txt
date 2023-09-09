@@ -1,0 +1,51 @@
+#include<iostream.h>
+#include<conio.h>
+class A
+{
+  protected:
+  int a;
+  int b;
+  public:
+  void set()
+  {
+    cin>>a;
+    cin>>b;
+  }
+
+};
+class B : public A
+{
+  public:
+  void displayb()
+  {
+    cout<<a<<endl;
+    cout<<b<<endl;
+    cout<<"a mult b is"<<endl;
+   int c=a*b;
+    cout<<c<<endl;
+  }
+};
+class C : public A
+{
+  public:
+  void display()
+  {
+    cout<<a<<endl;
+    cout<<b<<endl;
+    cout<<"a add b is:"<<endl;
+    int d=a+b;
+    cout<<d<<endl;
+  }
+};
+int main()
+{
+  B b;
+  C c;
+  clrscr();
+  b.set();
+  b.displayb();
+  c.set();
+  c.display();
+  getch();
+  return 0;
+}

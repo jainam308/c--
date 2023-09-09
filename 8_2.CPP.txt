@@ -1,0 +1,44 @@
+#include<iostream.h>
+#include<conio.h>
+class time
+{
+  int hrs;
+  int min;
+  public:
+  void getdata()
+  {
+    cout<<"Enter value of hours:"<<endl;
+    cin>>hrs;
+    cout<<"Enter value of minutes:"<<endl;
+    cin>>min;
+  }
+  void printdata()
+  {
+    cout<<"HOURS:"<<hrs<<endl;
+    cout<<"MINUTES:"<<min<<endl;
+  }
+  friend time totaltime(time a,time b);
+};
+time totaltime(time a,time b)
+{
+   time t;
+   t.hrs=a.hrs+b.hrs;
+   t.min=a.min+b.min;
+   if(t.min>=60)
+   {
+      t.hrs++;
+      t.min=t.min-60;
+   }
+   return t;
+}
+int main()
+{
+   time t1,t2,t3;
+   clrscr();
+   t1.getdata();
+   t2.getdata();
+   t3=totaltime(t1,t2);
+   t3.printdata();
+   getch();
+   return 0;
+}

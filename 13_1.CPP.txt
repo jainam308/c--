@@ -1,0 +1,25 @@
+#include<stdlib.h>
+#include<stdio.h>
+#include<conio.h>
+#include<fstream.h>
+int main()
+{
+  ifstream f;
+  char s;
+  int count=0;
+  clrscr();
+  f.open("xyz.txt");
+  while(1)
+  {
+    f.get(s);
+    if(s==EOF)
+    {
+     break;
+    }
+    cout<<s;
+    count++;
+  }
+  cout<<"No of characters in xyz file is:"<<count<<endl;
+  getch();
+  return 0;
+}

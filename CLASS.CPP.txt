@@ -1,0 +1,67 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+class account
+{
+  long int account_no;
+  char ac_name[20];
+  float balance;
+  int br_code;
+  char type;
+  public:
+
+  void getdata()
+  {
+    cout<<"enter your account detais"<<endl;
+
+    cout<<"enter your account no"<<endl;
+    cin>>account_no;
+
+    cout<<"enter your account name"<<endl;
+    cin>>ac_name;
+
+    cout<<"enter enter your account balance"<<endl;
+    cin>>balance;
+
+    cout<<"enter your branch code"<<endl;
+    cin>>br_code;
+
+    cout<<"enter your account type"<<endl;
+    cin>>type;
+   }
+   void printdata()
+   {
+     cout<<"Account No:"<<account_no<<endl;
+     cout<<"your account name:"<<ac_name<<endl;
+     cout<<"your account balance :"<<balance <<endl;
+     cout<<"your branch code is:"<<br_code<<endl;
+     cout<<"your ac type:"<<type<<endl;
+
+    }
+    void deposit(int ac)
+    {
+      float bal=bal+acc;
+    }
+    void withdraw(int acc)
+    {
+       float bal=bal-acc;
+    }
+};
+int main()
+{
+       account a1;
+       clrscr();
+       a1.getdata();
+       a1.printdata();
+       a1.deposit(2000);
+       //a1.withdraw(5000);
+       getch();
+       return 0;
+}
+
+
+
+
+
+
+

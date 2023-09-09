@@ -1,0 +1,33 @@
+#include<iostream.h>
+#include<conio.h>
+class distance
+{
+   int feet;
+   int inch;
+   public:
+   distance()
+   {
+     feet=0;
+     inch=0;
+   }
+   distance(int f,int i)
+   {
+     feet=f;
+     inch=i;
+   }
+   void display()
+   {
+     cout<<"FEET:"<<feet<<endl;
+     cout<<"INCH:"<<inch<<endl;
+   }
+};
+int main()
+{
+  distance d1;
+  distance d2(4,7);
+  clrscr();
+  d1.display();
+  d2.display();
+  getch();
+  return 0;
+}

@@ -1,0 +1,14 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+class student
+{
+  protected:
+  int roll;
+  char name[20];
+  char branch[10];
+  public:
+  void read()
+  {
+    cout<<"Enter student roll:"<<endl;
+    cin>>roll;
